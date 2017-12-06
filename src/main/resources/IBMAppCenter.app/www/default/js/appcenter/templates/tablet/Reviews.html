@@ -1,0 +1,20 @@
+<div class="view mblView">	
+	<!-- Licensed Materials - Property of IBM                                   
+		5725-I43 (C) Copyright IBM Corp. 2011, 2014. All Rights Reserved.
+		US Government Users Restricted Rights - Use, duplication or            
+		disclosure restricted by GSA ADP Schedule Contract with IBM Corp.  -->
+	<div data-dojo-type="dojox/app/widgets/Container" data-dojo-attach-point="container" data-app-constraint="center" data-dojo-props="scrollable: true, fixedFooter:'mainTabBar'">				
+		<ul data-dojo-type="appcenter/widgets/EdgeToEdgeStoreList" data-dojo-attach-point="list" class="feedbackList" data-app-constraint="center" data-dojo-props="variableRowHeight:true, type:'feedback'">
+		</ul>
+		<div class="buttoncellwrapper" >
+			<button data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn itemcell" data-dojo-attach-point="loadButton" style="display:none">${nls.loadMore}</button>
+		</div>		
+	</div>
+	<div data-dojo-attach-point="noReview" class="emptyList emptyReview">
+		<div class="emptyListContainer">
+			<div class="emptyReviewIcon"></div>
+			<span data-dojo-attach-point="noReviewLabel">${nls.noReview}</span>
+		</div>
+	</div>		
+		
+</div>

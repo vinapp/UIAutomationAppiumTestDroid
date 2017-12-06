@@ -1,0 +1,21 @@
+
+/* Stylesheet content from js/idx/mobile/themes/common/dojox/domButtons/DomButtonGrayStar.css in folder common */
+/* === Gray Star Button ==*/
+.mblDomButtonGrayStar {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url(images/mblDomButtonGrayStar.png) center center no-repeat;
+}
+.mblDomButtonGrayStar > div {
+	display: none;
+}
+.mblDomButtonGrayStar > div > div {
+	display: none;
+}
+.mblDomButtonGrayStar > div > div > div {
+	display: none;
+}
+.mblDomButtonGrayStar > div > div > div > div {
+	display: none;
+}

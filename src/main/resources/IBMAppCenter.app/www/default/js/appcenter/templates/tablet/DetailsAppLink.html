@@ -1,0 +1,59 @@
+<div class="view mblView appLink" style="display:none">	
+	<!-- Licensed Materials - Property of IBM                                   
+		5725-I43 (C) Copyright IBM Corp. 2011, 2014. All Rights Reserved.
+		US Government Users Restricted Rights - Use, duplication or            
+		disclosure restricted by GSA ADP Schedule Contract with IBM Corp.  -->	
+	<div class="ios-status-bar"	data-app-constraint="top"></div>
+	<div data-dojo-attach-point="header" data-dojo-type="appcenter/widgets/Heading" label="${nls.detailsTitle}" data-dojo-props="transition:'slide'" data-app-constraint="top" style="right:0px">			
+		<span data-dojo-attach-point="favButton" data-dojo-type="dojox/mobile/ToolBarButton" label="${nls.toggleFavorite}" class="mblSpriteButton mblFloatRight" data-dojo-props="icon:'mblDomButtonHeadingFavIcon', toggle:true"></span>			
+	</div>
+		
+	<div class="topPanel" data-app-constraint="top">
+								
+		<div id="contentWrapper" style="float:left;width:50%">
+			<div style="margin-left:80px;margin-bottom:15px;" class="unselectable" >			
+				<div data-dojo-attach-point="label" class="titleText">&nbsp;</div>
+				<div data-dojo-attach-point="updatedLabel" class="subTitleText">&nbsp;</div>		
+				<div>
+					<span data-dojo-type="appcenter/widgets/Rating" data-dojo-attach-point="rating" data-dojo-props="baseClass:'mblSmallRating'" ></span>
+					<span data-dojo-attach-point="nbRating" class="nbRating" ></span>
+				</div>					
+			</div>
+		</div>
+		
+		<div style="width:72px;float:left;margin-left:-50%;position:relative" class="mblSmallRating">
+			<img data-dojo-attach-point="icon" class="detailsIcon">			
+			<div data-dojo-attach-point="favIndicator" class="icon-indicator-bottom-left mblStarRatingIcon" style="display:none"></div>
+			<div data-dojo-attach-point="linkIndicator" class="icon-indicator-bottom-right mblAppLinkIcon"></div>
+		</div>
+		
+		<div class="buttoncellwrapper" style="margin-bottom: 10px">
+			<button data-dojo-attach-point="addReviewButton" data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn paddedButton" data-dojo-props="duration:100" >${nls.addReviewButton}</button>
+			<button data-dojo-attach-point="gotoAppStoreButton" data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn paddedButton" data-dojo-props="duration:100" >${nls.gotoAppStore}</button>				
+		</div>
+		
+		<div style="clear:both;text-align:center">
+			<ul data-dojo-attach-point="segmentedControlDetails" data-dojo-type="appcenter/widgets/SegmentedControl" data-dojo-props='barType:"segmentedControl"' >
+				<li data-dojo-attach-point="descriptionButton" data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>${nls.detailSegment}</li>
+				<li data-dojo-attach-point="reviewsButton" data-dojo-type="dojox/mobile/TabBarButton" >${nls.reviewsTitle}</li>			
+			</ul>		
+		</div>
+							
+	</div>
+				
+	<div data-dojo-attach-point="rateDialog" class="mblAddReviewDialog" data-dojo-type="dojox/mobile/SimpleDialog" data-dojo-props='closeButton:true'>
+		<div data-dojo-attach-point="rateDialogVersionLabel" ></div>
+		<div>			
+			<div style="margin-top:14px;margin-left:17px;margin-right:17px">
+				<form data-dojo-attach-point="form" data-dojo-attach-event='onsubmit:_onSubmit'>		
+					<div data-dojo-attach-point="ratingDialog" data-dojo-type="appcenter/widgets/Rating" style="width:180px;margin-left:auto;margin-right:auto;margin-bottom:10px" data-dojo-props="editable:true"></div>
+					<textarea data-dojo-attach-point="ratingDialogMessage" data-dojo-type="dojox/mobile/TextArea" style="height:200px;width:100%;box-sizing:border-box"></textarea>
+				</form>
+			</div>			
+			<div class="buttoncellwrapper">
+				<button data-dojo-attach-point="sendButton" data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn padded1Button" data-dojo-props="duration:100" >${nls.sendButton}</button>
+			</div>						
+		</div>
+	</div>	
+	
+</div>

@@ -1,0 +1,145 @@
+{
+	"id": "appcenter",
+	"name": "IBM MobileFirst Application Center Mobile Client",
+	"description": "This application allows to manage on the mobile devices applications provided by the Application Center",
+	"splash": "splash",
+
+	"loaderConfig": {
+		"paths": {
+			"appcenter": "../../appcenter",
+			"idx": "../../idx"
+		}
+	},
+
+	"dependencies": [
+	         		"dojox/mobile/_base",
+	         		"dojox/mobile/_compat",
+	         		"dojox/mobile/TabBar",
+	         		"dojox/mobile/RoundRect",
+	         		"dojox/mobile/TabBarButton",
+	         		"dojox/mobile/TextBox",
+	         		"dojox/mobile/TextArea",
+	         		"dojox/mobile/CheckBox",
+	         		"dojox/mobile/ExpandingTextArea",
+	         		"dojox/mobile/Button",
+	         		"dojox/mobile/RoundRect",
+	         		"dojox/mobile/Heading",
+	         		"dojox/mobile/ListItem",
+	         		"dojox/mobile/RoundRectList",	         		
+	         		"dojox/mobile/EdgeToEdgeList",
+	         		"dojox/mobile/EdgeToEdgeStoreList",
+	         		"dojox/mobile/RoundRectCategory",
+	         		"dojox/mobile/Switch",
+	         		"dojox/mobile/SimpleDialog",
+	         		"dojox/mobile/ScrollableView",
+	         		"dojox/mobile/ScrollablePane",
+	         		"dojox/mobile/Opener",
+	         		"dojox/mobile/View",
+	         		"dojox/app/widgets/Container",
+	         		"appcenter/widgets/EdgeToEdgeStoreList",
+	         		"appcenter/widgets/Heading",
+	         		"appcenter/widgets/Rating",
+	         		"appcenter/widgets/Button",
+	         		"appcenter/widgets/TabBarButton"
+	         	],
+	         	
+	"controllers": [
+		"dojox/app/controllers/Load",
+		"dojox/app/controllers/Transition",
+		"dojox/app/controllers/Layout",
+	    "appcenter/controllers/HistoryController",
+	    "appcenter/controllers/ControllerPhone"
+	],       		     
+
+	"modules": [
+		"appcenter/appcenter"
+	],
+	
+	"has": {
+		"ios" : {
+			"defaultView": "PreLogin"
+		},		
+		"!ios":{
+			"defaultView": "Login"
+		}
+	},
+
+
+	"defaultTransition": "fade",
+	
+	"nls": "appcenter/nls/common",
+	
+	"views": {
+	
+	    "Tabs": {
+	    	"template": "appcenter/templates/Tabs.html",
+	    	"controller": "appcenter/views/Tabs.js",
+	    	
+	    	"views": {
+	    		"AppList": {
+	    			"template": "appcenter/templates/AppListContainer.html",
+	    			"controller": "appcenter/views/AppListContainer.js",
+	    			
+	    			"views": {
+	    				"Catalog": {
+							"template": "appcenter/templates/AppList.html",
+							"type": "js/appcenter/views/Catalog.js"
+						},
+						"Favorites": {
+							"template": "appcenter/templates/AppList.html",
+							"type": "js/appcenter/views/Favorites.js"
+						},
+						
+						"Updates": {
+							"template": "appcenter/templates/AppList.html",
+							"type": "js/appcenter/views/Updates.js"
+						}
+	    			}
+	    		},
+	    		
+	    		"DetailsVersion": {
+					"template": "appcenter/templates/details/Details.html",
+					"type": "js/appcenter/views/DetailsVersion.js"
+				},				
+				"DetailsAppLink": {
+					"template": "appcenter/templates/details/DetailsAppLink.html",
+					"type": "js/appcenter/views/DetailsAppLink.js"
+				},
+				"VersionHistory": {
+					"template": "appcenter/templates/details/VersionHistory.html",
+					"controller": "appcenter/views/VersionHistory.js"
+				},
+				"Reviews": {
+					"template": "appcenter/templates/details/Reviews.html",
+					"type": "js/appcenter/views/Reviews.js"
+				}
+	    	}
+	    },
+							
+		"Login": {
+			"has": {
+				"WindowsPhone" : {
+					"template": "appcenter/templates/Login-noscroll.html",
+				},
+				"ios" : {
+					"template": "appcenter/templates/Login-noscroll-ios.html",
+				},
+				"android":{
+					"template": "appcenter/templates/Login.html",
+				}
+			},
+			"controller": "appcenter/views/Login.js" 
+		},
+		
+		"PreLogin": {
+			"template": "appcenter/templates/PreLogin.html",
+			"controller": "appcenter/views/PreLogin.js"
+		},
+						
+		"SendReview": {
+			"template": "appcenter/templates/details/SendReview.html",
+			"controller": "appcenter/views/SendReview.js"
+		}
+					
+	}
+}

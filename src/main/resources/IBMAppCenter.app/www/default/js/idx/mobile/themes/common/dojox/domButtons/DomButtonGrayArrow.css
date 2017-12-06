@@ -1,0 +1,21 @@
+
+/* Stylesheet content from js/idx/mobile/themes/common/dojox/domButtons/DomButtonGrayArrow.css in folder common */
+/* === Gray Arrow Button ==*/
+.mblDomButtonGrayArrow {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url(images/mblDomButtonGrayArrow.png) center center no-repeat;
+}
+.mblDomButtonGrayArrow > div {
+	display: none;
+}
+.mblDomButtonGrayArrow > div > div {
+	display: none;
+}
+.mblDomButtonGrayArrow > div > div > div {
+	display: none;
+}
+.mblDomButtonGrayArrow > div > div > div > div {
+	display: none;
+}

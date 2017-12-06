@@ -1,0 +1,20 @@
+
+/* Stylesheet content from js/idx/mobile/themes/common/dojox/domButtons/DomButtonTransparent19.css in folder common */
+/* === Transparent Button ==*/
+.mblDomButtonTransparent19 {
+	position: relative;
+	width: 19px;
+	height: 19px;
+}
+.mblDomButtonTransparent19 > div {
+	display: none;
+}
+.mblDomButtonTransparent19 > div > div {
+	display: none;
+}
+.mblDomButtonTransparent19 > div > div > div {
+	display: none;
+}
+.mblDomButtonTransparent19 > div > div > div > div {
+	display: none;
+}

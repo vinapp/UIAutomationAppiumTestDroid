@@ -1,0 +1,8 @@
+
+/* Stylesheet content from js/idx/mobile/themes/oneui_ios/dojox/IconContainer.css in folder common */
+
+@import url("domButtons/DomButtonGrayCross.css");
+@import url("domButtons/DomButtonBlackCircleCross.css");
+
+/* delegate to oneui common theme */
+@import url("../../common/dojox/IconContainer.css");

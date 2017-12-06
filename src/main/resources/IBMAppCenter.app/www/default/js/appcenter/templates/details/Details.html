@@ -1,0 +1,50 @@
+<div class="view mblView" style="display:none">	
+		<!-- Licensed Materials - Property of IBM                                   
+		5725-I43 (C) Copyright IBM Corp. 2011, 2014. All Rights Reserved.
+		US Government Users Restricted Rights - Use, duplication or            
+		disclosure restricted by GSA ADP Schedule Contract with IBM Corp.  -->
+	<div class="ios-status-bar"	data-app-constraint="top"></div>
+	<div data-dojo-attach-point="header" data-dojo-type="appcenter/widgets/Heading" data-dojo-props="transition:'slide'" data-app-constraint="top" style="right:0px">${nls.detailsTitle}
+		<span data-dojo-attach-point="favButton" data-dojo-type="dojox/mobile/ToolBarButton" class="mblSpriteButton mblFloatRight" data-dojo-props="icon:'mblDomButtonHeadingFavIcon', toggle:true"></span>			
+	</div>
+		
+	<div class="topPanel" data-app-constraint="top">
+							
+		<div id="contentWrapper" style="float:left;width:100%">
+			<div style="margin-left:80px" class="unselectable">
+				
+				<div data-dojo-attach-point="label" class="titleText">&nbsp;</div>				
+				<div data-dojo-attach-point="versionLabel" class="subTitleText">&nbsp;</div>
+				<div data-dojo-attach-point="internalVersionLabel" class="subTitleText">&nbsp;</div>
+				<div data-dojo-attach-point="updatedLabel" class="subTitleText">&nbsp;</div>
+				<div data-dojo-attach-point="sizeLabel" class="subTitleText">&nbsp;</div>				
+				<div>
+					<span data-dojo-type="appcenter/widgets/Rating" data-dojo-attach-point="rating" data-dojo-props="baseClass:'mblSmallRating'" ></span>
+					<span data-dojo-attach-point="nbRating" class="nbRating" ></span>
+				</div>
+			</div>
+		</div>
+				
+		<div style="width:72px;float:left;margin-left:-100%;position:relative" class="mblSmallRating">
+			<img data-dojo-attach-point="icon" class="detailsIcon">
+			<img src="css/images/loading.gif" data-dojo-attach-point="installIndicator" class="icon-indicator-bottom-right small-progress-indicator" style="display:none">
+			<div data-dojo-attach-point="favIndicator" class="icon-indicator-bottom-left mblStarRatingIcon" style="display:none"></div>
+		</div>
+		
+		<div class="buttoncellwrapper" style="margin-top:10px">
+			<button data-dojo-attach-point="installButton" data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn paddedButton" data-dojo-props="duration:100" ><span>${nls.install}</span></button>
+			<button data-dojo-attach-point="uninstallButton" data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn paddedButton" data-dojo-props="duration:100" >${nls.uninstall}</button>
+			<button data-dojo-attach-point="cancelButton" data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn paddedButton padded1ButtonLong" data-dojo-props="duration:100" style="display:none"><span class="mblButtonText" data-dojo-attach-point="cancelBtnLabel"></span></button>		
+		</div>
+	</div>		
+		
+	<div data-dojo-type="dojox/app/widgets/Container" data-dojo-attach-point="container" data-app-constraint="center" data-dojo-props="scrollable: true, fixedFooter:'mainTabBar'">
+		<div data-dojo-attach-point="description" style="padding:7px 17px;border-bottom:1px solid #DDD" class="unselectable"></div>				
+		<ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-attach-point="list" >			
+			<li data-dojo-type="appcenter/widgets/ListItem" data-dojo-attach-point="rateAppListItem" data-dojo-props="clickable:true,arrowClass:'mblDomButtonGrayArrow'">&nbsp;</li>
+			<li data-dojo-type="appcenter/widgets/ListItem" data-dojo-attach-point="reviewsListItem" data-dojo-props="clickable:true,arrowClass:'mblDomButtonGrayArrow'">${nls.viewReviews}</li>
+			<li data-dojo-type="appcenter/widgets/ListItem" data-dojo-attach-point="versionHistoryItem" data-dojo-props="clickable:true,arrowClass:'mblDomButtonGrayArrow'">${nls.versionHistory}</li>
+		</ul>		
+	</div>
+			
+</div>

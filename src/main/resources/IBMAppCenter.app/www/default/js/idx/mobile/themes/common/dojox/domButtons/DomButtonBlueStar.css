@@ -1,0 +1,21 @@
+
+/* Stylesheet content from js/idx/mobile/themes/common/dojox/domButtons/DomButtonBlueStar.css in folder common */
+/* === Blue Star Button ==*/
+.mblDomButtonBlueStar {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url(images/mblDomButtonBlueStar.png) center center no-repeat;
+}
+.mblDomButtonBlueStar > div {
+	display: none;
+}
+.mblDomButtonBlueStar > div > div {
+	display: none;
+}
+.mblDomButtonBlueStar > div > div > div {
+	display: none;
+}
+.mblDomButtonBlueStar > div > div > div > div {
+	display: none;
+}

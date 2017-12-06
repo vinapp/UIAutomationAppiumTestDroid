@@ -1,0 +1,21 @@
+
+/* Stylesheet content from js/idx/mobile/themes/common/dojox/domButtons/DomButtonWhiteArrow.css in folder common */
+/* === White Arrow Button ==*/
+.mblDomButtonWhiteArrow {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url(images/mblDomButtonWhiteArrow.png) center center no-repeat;
+}
+.mblDomButtonWhiteArrow > div {
+	display: none;
+}
+.mblDomButtonWhiteArrow > div > div {
+	display: none;
+}
+.mblDomButtonWhiteArrow > div > div > div {
+	display: none;
+}
+.mblDomButtonWhiteArrow > div > div > div > div {
+	display: none;
+}

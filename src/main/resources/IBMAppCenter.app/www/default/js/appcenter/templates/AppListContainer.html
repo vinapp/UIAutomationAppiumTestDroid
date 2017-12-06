@@ -1,0 +1,24 @@
+<div class="view mblView">
+	<!-- Licensed Materials - Property of IBM                                   
+		5725-I43 (C) Copyright IBM Corp. 2011, 2014. All Rights Reserved.
+		US Government Users Restricted Rights - Use, duplication or            
+		disclosure restricted by GSA ADP Schedule Contract with IBM Corp.  -->	
+	<div class="ios-status-bar"	data-app-constraint="top"></div>
+	<div data-dojo-type="appcenter/widgets/Heading" data-dojo-attach-point="header" style="right:0;visibility:hidden" data-app-constraint="top">
+		<span data-dojo-attach-point="refreshButton" class="mblSpriteButton mblFloatRight" data-dojo-props="icon:'mblDomButtonHeadingRefreshIcon'" data-dojo-type="dojox/mobile/ToolBarButton" ></span>
+		<span data-dojo-attach-point="sortButton" class="mblSpriteButton mblFloatRight" data-dojo-props="icon:'mblDomButtonHeadingSortIcon'" data-dojo-type="dojox/mobile/ToolBarButton" ></span>
+		<span data-dojo-attach-point="logoutButton" class="mblSpriteButton mblFloatRight" data-dojo-props="icon:'mblDomButtonHeadingLogoutIcon'" data-dojo-type="dojox/mobile/ToolBarButton" ></span>	
+	</div>
+		
+	<div data-dojo-attach-point="sortDialog" data-dojo-type="dojox/mobile/SimpleDialog">
+		<div class="preferenceDialogTitle">${nls.sortTitle}</div>
+		<ul data-dojo-type="dojox/mobile/RoundRectList" data-dojo-props="select:'single'">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-attach-point="sortNameItem" data-dojo-props="checked: true,	checkClass: 'mblDomButtonDarkBlueCheck'">${nls.sortName}</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-attach-point="sortPopularItem" data-dojo-props="checkClass: 'mblDomButtonDarkBlueCheck'">${nls.sortPopularTab}</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-attach-point="sortRatingItem" data-dojo-props="checkClass: 'mblDomButtonDarkBlueCheck'">${nls.sortRatingTab}</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-attach-point="showLastUpdateItem" data-dojo-props="checkClass: 'mblDomButtonDarkBlueCheck'">${nls.sortDateTab}</li>
+		</ul>			
+		<button data-dojo-attach-point="dialogOkButton" data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn padded1Button" data-dojo-props="fixed:'bottom'" >${nls.okButton}</button>	
+	</div>
+
+</div>

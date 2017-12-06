@@ -1,0 +1,80 @@
+<div class="view mblView">
+	<!-- Licensed Materials - Property of IBM                                   
+		5725-I43 (C) Copyright IBM Corp. 2011, 2014. All Rights Reserved.
+		US Government Users Restricted Rights - Use, duplication or            
+		disclosure restricted by GSA ADP Schedule Contract with IBM Corp.  -->
+	<h1 data-dojo-type="appcenter/widgets/Heading" data-dojo-attach-point="header" data-app-constraint="top" style="right:0">
+	</h1>
+	<div data-dojo-type="dojox/app/widgets/Container" data-dojo-attach-point="container" data-app-constraint="center" data-dojo-props="scrollable: true">
+		<form data-dojo-attach-point="form" data-dojo-attach-event='onsubmit:_onSubmit'>
+			<div class="loginForm">
+				<div data-dojo-type="dojox/mobile/RoundRect">
+					<div class="oneLinefield">						
+						<input id="${id}_login"
+							name="${id}_login"  
+							data-dojo-type="dojox/mobile/TextBox" 
+							autocorrect="off" autocapitalize="off"
+							required="true"
+							data-dojo-attach-point="userId"
+							trim="true"
+							placeHolder="${nls.phoneUsernamePH}" 
+							class="formField">
+				 	</div>
+					<div class="oneLinefield">						
+						<input id="${id}_pw" 
+							name="${id}_pw"
+							data-dojo-type="dojox/mobile/TextBox" 
+							autocorrect="off" autocapitalize="off"
+							data-dojo-attach-point="password"
+							trim="true"
+							required="true"
+							type="password"
+							placeHolder="${nls.phonePasswordPH}" 
+							class="formField">
+					</div>
+				</div> 
+				<div data-dojo-type="dojox/mobile/RoundRect" data-dojo-attach-point="serverPane">
+					<div class="oneLinefield">						
+						<input id="${id}_server" 
+							name="${id}_server"
+							data-dojo-type="dojox/mobile/TextBox" 
+							autocorrect="off" autocapitalize="off"																								
+							trim="true"		
+							required="true"					
+							data-dojo-attach-point="serverName" 
+							placeHolder="${nls.phoneServerNamePH}" 
+							class="formField" >
+					</div>
+					<div class="oneLinefield" data-dojo-attach-point="serverPortField">						
+						<input id="${id}_port" data-dojo-type="dojox/mobile/TextBox"
+							name="${id}_port" 
+							autocorrect="off" autocapitalize="off"
+							trim="true"
+							type="tel"
+							data-dojo-attach-point="serverPort" 
+							placeHolder="${nls.phoneServerPortPH}" 
+							class="formField" >
+					</div>
+					<div class="oneLinefield" data-dojo-attach-point="serverContextField">						
+						<input id="${id}_ctx" 
+							name="${id}_ctx"
+							data-dojo-type="dojox/mobile/TextBox" 
+							autocorrect="off" autocapitalize="off"
+							trim="true"
+							data-dojo-attach-point="serverContext" 
+							placeHolder="${nls.phoneServerContextPH}" 
+							class="formField" >
+					</div>	
+					<div class="oneLinefield">
+						<label for="${id}_ssl" >${nls.sslLabel}</label>						
+						<span id="${id}_ssl" data-dojo-type="dojox/mobile/Switch" data-dojo-props="value:'off'" data-dojo-attach-point="settingsSSL"></span>
+					</div>
+				</div>
+				<div class="buttoncellwrapper">
+					<button data-dojo-attach-point="loginButton" data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn itemcell" >${nls.loginButton}</button>
+				</div>
+				<div class="productVersion" data-dojo-attach-point="versionNode"></div>				
+			</div>
+		</form>				
+	</div>	
+</div>

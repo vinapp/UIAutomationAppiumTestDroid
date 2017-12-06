@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>application id</key>
+	<string>AppCenter</string>
+	<key>application version</key>
+	<string>7.1</string>
+	<key>authenticitySharedData</key>
+	<string>${authenticitySharedData}</string>
+	<key>buildtime</key>
+	<string>1472040180</string>
+	<key>environment</key>
+	<string>iphone</string>
+	<key>host</key>
+	<string>appcenter.rtp.raleigh.ibm.com</string>
+	<key>ignoredFileExtensions</key>
+	<string></string>
+	<key>platformVersion</key>
+	<string>7.1.0.0</string>
+	<key>port</key>
+	<string>8443</string>
+	<key>protocol</key>
+	<string>https</string>
+	<key>testWebResourcesChecksum</key>
+	<string>false</string>
+	<key>wlAppFamily</key>
+	<string></string>
+	<key>wlMainFile</key>
+	<string>AppCenter.html</string>
+	<key>wlSecureDirectUpdatePublicKey</key>
+	<string></string>
+	<key>wlServerContext</key>
+	<string>/</string>
+	<key>wlShareCookies</key>
+	<string></string>
+	<key>wlShareUserCert</key>
+	<string>false</string>
+	<key>wlUid</key>
+	<string>drdt+i/9GTG5gOntqJcE/Q==</string>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+
+/* Stylesheet content from js/idx/mobile/themes/common/dojox/domButtons/DomButtonGrayKnob.css in folder common */
+/* === Gray Knob Button ==*/
+.mblDomButtonGrayKnob {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url(images/mblDomButtonGrayKnob.png) center center no-repeat;
+}
+.mblDomButtonGrayKnob > div {
+	display: none;
+}
+.mblDomButtonGrayKnob > div > div {
+	display: none;
+}
+.mblDomButtonGrayKnob > div > div > div {
+	display: none;
+}
+.mblDomButtonGrayKnob > div > div > div > div {
+	display: none;
+}

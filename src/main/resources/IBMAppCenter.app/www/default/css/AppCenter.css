@@ -1,0 +1,967 @@
+
+/* Stylesheet content from css/AppCenter.css in folder common */
+/*
+ *  Licensed Materials - Property of IBM
+ *  5725-I43 (C) Copyright IBM Corp. 2011, 2014. All Rights Reserved.
+ *  US Government Users Restricted Rights - Use, duplication or
+ *  disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+/* Fix to prevent view from being scrollable */
+body {
+    overflow: hidden;
+    -ms-content-zooming: none;
+}
+
+#wl_ios7bar{
+	display:none !important;
+}
+
+body.wl_ios7{
+	padding-top: 0 !important;
+}
+
+/* Fix to prevent buttons from being highlighted when pressed */
+.mblToolBarButton{
+	-ms-touch-action: none !important;
+}
+
+/* IDX CSS Fix wrt Dojo 1.9 */
+.mblTabBarButton {
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Fix gradients on old webkit browsers*/
+.mblButton {
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#dbdbdb));
+	background-image:-webkit-linear-gradient(top,#f4f4f4 0%,#dbdbdb 100%);	
+	background-image:-ms-linear-gradient(top,#f4f4f4 0%,#dbdbdb 100%);	
+}
+
+.mblButton.mblButtonSelected {
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#dbdbdb),to(#f4f4f4));
+	background-image:-webkit-linear-gradient(top,#dbdbdb 0%,#f4f4f4 100%);
+	background-image:-ms-linear-gradient(top,#dbdbdb 0%,#f4f4f4 100%);
+}
+
+.mblHeading {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6b6b6b), color-stop(1%,#6b6b6b), color-stop(1%,#404040), color-stop(89%,#000000), color-stop(89%,#131313), color-stop(93%,#000000), color-stop(96%,#1a96c6), color-stop(99%,#008abf), color-stop(100%,#131313), color-stop(100%,#0075a3));
+	background-image: -webkit-linear-gradient(bottom, #0075a3, #0075a3 1px, #008abf 1px, #008abf 3px, #1a96c6 3px, #1a96c6 4px, #000000 4px, #000000 6px, #131313 6px, #444444 51px, #6b6b6b 51px, #6b6b6b 52px);
+	background-image: -ms-linear-gradient(top, #6b6b6b 0%, #6b6b6b 1%, #404040 1%, #000000 89%, #131313 89%, #000000 93%, #1a96c6 96%, #008abf 99%, #131313 100%, #0075a3 100%); 	
+}
+.mblTabBarSegmentedControl .mblTabBarButton {
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#dbdbdb));
+	background-image:-webkit-linear-gradient(top,#f4f4f4 0%,#dbdbdb 100%);	
+	background-image:-ms-linear-gradient(top,#f4f4f4 0%,#dbdbdb 100%);
+	
+}
+.mblTabBarSegmentedControl .mblTabBarButton.mblTabBarButtonSelected {
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#e2e2e2),to(#a4a4a4));
+	background-image:-webkit-linear-gradient(top,#e2e2e2 0%,#a4a4a4 100%);
+	background-image:-ms-linear-gradient(top,#e2e2e2 0%,#a4a4a4 100%);
+}
+
+.mblTabBarTabBar {
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#444),to(#000));
+	background-image:-webkit-linear-gradient(top,#444 0%,#000 100%);
+	background-image:-ms-linear-gradient(top,#444 0%,#000 100%);
+}
+
+.dj_ios .mblHeading {	
+	border-radius: 0 !important;
+}
+
+.ios-status-bar	{
+	height: 0;
+}
+
+.dj_ios.dj_status_bar .ios-status-bar {
+	height: 20px;
+	background-color: #333;
+	width: 100%;
+}
+
+.mblSwitchKnob {
+	background-image:-webkit-linear-gradient(top,#f4f4f4 0%,#dbdbdb 100%);
+	background-image:-ms-linear-gradient(top,#f4f4f4 0%,#dbdbdb 100%);
+	-webkit-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.mblSwitchBgRight {
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#dbdbdb),to(#f4f4f4));
+	background-image:-webkit-linear-gradient(top,#dbdbdb 0%,#f4f4f4 100%);
+	background-image:-ms-linear-gradient(top,#dbdbdb 0%,#f4f4f4 100%);
+}
+
+.mblSwitchBgLeft {
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#085884),to(#008abf));
+	background-image:-webkit-linear-gradient(top,#085884 0%,#008abf 100%);
+	background-image:-ms-linear-gradient(top,#085884 0%,#008abf 100%);
+}
+
+.mblEdgeToEdgeList {
+	background-color: #FFF;
+}
+
+input:-ms-input-placeholder /* placeholder only style */   {
+	color:#CCC;
+}
+
+.dj_windowsphone .mblSwitch { /* workaround mask */
+	width: 96px;
+	height: 32px;
+}
+
+.dj_tablet.dj_ios #appcenter_Root { /* workaround modal dialog issues */
+	position: relative;
+}
+
+.mblButtonText {
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+/* Replace gradients on non-webkit browsers. For the tab bar, we use the same color as for the heading */
+.mblTabBarTabBar {
+	background-color: #2D2D2D;
+}
+
+/* OneUI uses webkit transform, we must set it for other browsers */ 
+.mblHeading .mblToolBarButtonArrow {
+	/* -webkit-transform: scale(0.65, 1.05) rotate(45deg); */
+	-moz-transform: scale(0.65, 1.05) rotate(45deg);
+	-ms-transform: scale(0.65, 1.05) rotate(45deg);
+	transform: scale(0.65, 1.05) rotate(45deg);
+}
+
+.loginForm .mblTextBox {
+	border-color: rgba(0, 0, 0, 0.2);
+}
+
+.loginForm .productVersion {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 10px;
+	color: #ccc;
+}
+
+/* END IDX CSS Fix wrt Dojo 1.9 */
+
+
+/* hide browser feedback on touch */
+* { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
+
+/*
+ * Styles for CSS classes that are used to hide UI elements that are only
+ * visible in certain configurations (e.g. only on tablets or only on
+ * Android devices).
+ */
+.dj_tablet .phoneOnly {
+	display: none;
+}
+html:not(.dj_tablet) .tabletOnly {
+	display: none;
+}
+html:not(.oneui_android_theme) .androidOnly {
+	display: none;
+}
+html:not(.oneui_ios_theme) .iosOnly {
+	display: none;	
+}
+.noLineBreak {
+	overflow: hidden; 
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.mblProgressIndicatorCenter {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -20px;
+}
+
+.mblButton.mblDisabled,
+.mblTabBarButton.mblDisabled {
+	color: #CCC !important;
+}
+.mblButton.mblDisabled .mblTabBarButtonLabel,
+.mblTabBarTabBar .mblTabBarButton.mblDisabled .mblTabBarButtonLabel{
+	color: #CCC !important;
+}
+
+.mblDomButtonCatalogTabIcon {
+	background-image: url(images/tab-catalog_32.png);
+	background-size: 32px 60px;
+	background-position: 0px 0px;
+	width: 32px;
+	height: 30px;	
+}
+
+.mblDomButtonFavoritesTabIcon {
+	background-image: url(images/tab-favorites_32.png);
+	background-size: 32px 60px;
+	background-position: 0px 0px;
+	width: 32px;
+	height: 30px;	
+}
+
+.mblDomButtonUpdatesTabIcon {
+	background-image: url(images/tab-updates_32.png);
+	background-position: 0px 0px;
+	background-size: 32px 60px;
+	width: 32px;
+	height: 30px;	
+}
+
+.mblDisabled .mblDomButtonCatalogTabIcon,
+.mblDisabled .mblDomButtonFavoritesTabIcon,
+.mblDisabled .mblDomButtonUpdatesTabIcon {
+	background-position: 0px 30px;	
+}
+
+.mblListItem.mblDisabled {
+	color: #CCC;
+}
+
+.mblSpriteButton .mblDomButton {
+	background-position: 0px 0px;
+	background-size: 32px 64px;
+	width: 32px;
+	height: 32px;
+}
+
+.oneui_android_theme .mblToolBarButtonSelected.mblSpriteButton .mblDomButton {
+	background-position: 0px 32px;	
+}
+
+.oneui_ios_theme .mblSpriteButton .mblDomButton {
+	background-position: 0px -2px;	
+}
+
+.oneui_ios_theme .mblSpriteButton .mblDomButtonHeadingLogoutIcon.mblDomButton {
+	background-position: 0px -1px;	
+}
+
+.mblDomButtonHeadingLogoutIcon {
+	background-image: url(images/logout_32.png);
+}
+
+.mblDomButtonGearIcon {
+	background-image: url(images/gear_32.png);	
+}
+
+.mblDomButtonHeadingRefreshIcon {
+	background-image: url(images/refresh_32.png);	
+}
+
+.mblDomButtonHeadingSortIcon {
+	background-image: url(images/sort_32.png);	
+}
+
+.mblDomButton.mblDomButtonHeadingFavIcon {	
+	background-image: url(images/stars_32.png);
+	background-size: 96px 32px;
+	background-position: -32px 0px;
+}
+
+.oneui_ios_theme .mblSpriteButton .mblDomButton.mblDomButtonHeadingFavIcon {
+	background-position: -32px -2px;	
+}
+
+.oneui_ios_theme .mblToolBarButtonSelected.mblSpriteButton .mblDomButton.mblDomButtonHeadingFavIcon {
+	background-position: 0 -2px;	
+}
+
+.oneui_android_theme .mblToolBarButtonSelected.mblSpriteButton .mblDomButton.mblDomButtonHeadingFavIcon {
+	background-position: 0px 0px;	
+}
+
+
+.mblFloatRight {
+	float:right !important;
+}
+
+.oneui_android_theme .mblHeading .mblToolBarButton.mblFloatRight {
+	margin:8px 0px 8px 15px;
+}
+
+.mblStarRatingIcon {
+	width: 32px;
+	height: 32px;
+	background-image: url(images/stars_32.png);
+	background-size: 96px 32px;
+	margin-left:2px;
+	margin-right:2px;
+}
+
+.mblStarRatingEmpty {
+	background-position: -32px 0px;
+}
+
+.mblStarRatingHalf {
+	background-position: -64px 0px;
+}
+
+.mblStarRatingFull {
+	background-position: 0px 0px;
+}
+
+.mblSmallRating .mblStarRatingIcon {
+	width: 20px;
+	height: 20px;
+	background-image: url(images/stars_20.png);
+	background-size: 60px 20px;
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.mblSmallRating .mblStarRatingEmpty {
+	background-position: -20px 0px;
+}
+
+.mblSmallRating .mblStarRatingHalf {
+	background-position: -40px 0px;
+}
+
+.mblAppLinkIcon {
+	width: 20px;
+	height: 20px;
+	background-image: url(images/link_20.png);
+	background-size: 20px 20px;
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.toaster {
+	position:absolute;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	margin-bottom: 50px;
+	color:white;
+	background-color: black;
+	font-weight: 700;
+	font-size: 14pt;
+	opacity: 1;
+	-webkit-opacity:1;
+	padding: 14px 14px;
+	z-index:1000;
+	-webkit-box-shadow: 0px 0px 7px 1px #555;
+	box-shadow: 0px 0px 7px 1px #555;	
+	text-align: center;
+}
+
+.mblOverlayConfirmationMessage {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: #FFF;
+	font-weight: 700;
+	font-size: 14pt;
+}
+
+.topPanel {
+	right:0;
+	padding: 7px 17px;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #DDD;	
+}
+
+.titleTopPanel {
+	font-weight: 700;
+	font-size: 14pt;
+	text-align: center;
+}
+
+.titleText {
+	font-weight: 700;
+	font-size: 14pt;	
+}
+
+.subTitleText {
+	font-size: 10pt;	
+}
+
+.emptyList {
+	text-align: center;
+	display: none;
+	position: absolute;
+	top: 50%;
+	width: 100%;	
+}
+
+.emptyListIcon {
+	background: url("images/default_bw.png") no-repeat top;
+	width: 100%;
+	height: 114px;
+}
+
+.emptyReviewIcon {
+	background: url("images/noreview.png") no-repeat top;
+	width: 100%;
+	height: 100px;
+}
+
+.emptyListContainer {
+	margin-top: -80px;
+}
+
+.emptyReview .emptyListContainer {
+	margin-top: -20px;
+}
+
+.icon-indicator-bottom-right{
+	position:absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.icon-indicator-bottom-left{
+	position:absolute;
+	left: 0;
+	bottom: 0;	
+}
+.small-progress-indicator {	
+	width: 16px;
+	height: 16px;
+}
+
+.dj_windowsphone .appList .mblListItem img.mblImageIcon.mblListItemIcon{
+	background-color: #ac52ff;
+}
+
+.appList .mblListItem img.mblImageIcon.mblListItemIcon{
+	width: 72px;
+	height: 72px;
+}
+
+.dj_ios .mblListItem img.mblImageIcon.mblListItemIcon{
+	border-radius: 10px;
+	-moz-box-shadow: 0px 2px 2px #1f1f1f;
+	-webkit-box-shadow: 0 2px 2px #1f1f1f;
+	box-shadow: 0 2px 2px #1f1f1f;
+}
+
+.appList .mblListItem {
+	height: 86px;
+	line-height: 86px;
+}
+
+.appList .mblListItem .mblListItemVersion,
+.feedbackList .mblListItem .mblListItemCreated,
+.feedbackList .mblListItem .mblListItemVersion {
+	font-weight: normal;
+	font-size: 0.8em;	
+}
+
+.feedbackList .mblListItem .mblListItemCreated {
+	margin-bottom: 5px;
+}
+
+.appList .mblListItemLayoutCenter {
+	width: auto;
+	left: 96px;
+	right: 39px;
+	text-align: left;
+	vertical-align: top;
+	top: 7px;
+	line-height: normal;
+}
+
+.appList .mblListItemRightIcon {	
+	margin-top: 32px;
+}
+
+.feedbackList .mblListItem {
+	height: auto;
+	line-height: normal;
+	padding: 10px 15px;
+}
+
+.feedbackList .mblListItemLayoutCenter {
+	position: relative;	
+	text-align: left;
+}
+
+.feedbackList .mblListItemAuthor {
+	margin-right: 7px;
+}
+
+.feedbackList .mblListItemFeedback {
+	font-weight: normal;
+}
+
+.dj_windowsphone .detailsIcon {
+	background-color: #ac52ff;
+}
+
+.detailsIcon {
+	width:72px;
+	height:72px;
+	vertical-align:top
+}
+
+.dj_ios .detailsIcon{
+	border-radius: 10px;
+	-moz-box-shadow: 0px 2px 2px #1f1f1f;
+	-webkit-box-shadow: 0 2px 2px #1f1f1f;
+	box-shadow: 0 2px 2px #1f1f1f;
+}
+
+.dj_android .mblHeadingSpanTitle {
+	position:absolute;
+}
+
+.mblHeadingSpanTitle {	
+	display: inline-block;
+	margin: 0 0 0 0 !important;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.mblSimpleDialog.AlertDialog{
+	border: 2px solid rgb(37, 37, 37);
+	border-radius: 4px;
+	background-color: rgba(0,0,0,.8);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(15%,#000000), color-stop(100%,#000000));
+	background: -webkit-linear-gradient(top, #45484d 0%,#000000 15%,#000000 100%);	
+}
+
+.mblSimpleDialog.AlertDialog .mblSimpleDialogText {
+	text-align: center;	
+	color: #FFF;
+}
+
+.mblSimpleDialog.AlertDialog .mblSimpleDialogTitle {
+	text-align: center;	
+	color: #FFF;
+	font-weight: bold;
+}
+
+.dj_tablet .loginForm label {
+	width: 22%;
+	text-align: left;
+	position: relative;	
+	display:inline-block;
+	font-size: 13pt;
+	font-weight: 700;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	left:0;	
+	display:inline-block;	
+}
+
+.dj_phone .loginForm label {
+	height: 30px;
+	vertical-align: middle;
+	text-align: left;	
+	display:inline-block;
+	font-size: 13pt;
+	font-weight: 700;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;	
+	padding-left: 6px;
+}
+
+.loginForm .mblTextBox {
+	font-size: 16px;
+}
+
+.dj_tablet .loginForm .field .formField {
+	position: absolute;
+	width:auto;
+	right: 12px;
+	left: 22%;
+	top: 5px;	
+	margin-top: auto;
+	margin-bottom: auto;	
+}
+
+.dj_tablet .loginForm input {
+	width: 100%;
+	display:inline-block;
+	margin-bottom: 15px;
+}
+
+.dj_phone .loginForm input {	
+	width:100%;	
+	-webkit-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+    padding: 0px 10px;
+    height: 36px;
+}
+
+.oneLinefield {
+	margin: 10px 0px;
+}
+
+.field {
+	position:relative;
+	line-height: 43px;
+	height: 43px;
+}
+
+.paddedButton {
+	display: inline-block;
+	padding: 0px 14px;	
+	margin: 2px 2px;
+}
+
+ .padded1Button {
+	padding: 0px 30px;
+}
+
+.padded1ButtonLong {
+	padding: 0px 20px;
+	max-width: 100%
+}
+
+.leftButton {
+	width:45%;
+	margin-right: 5px;
+}
+
+.rightButton {
+	width:45%;
+	margin-left: 5px;
+}
+
+.centeredButtonWrapper {
+	text-align: center;
+	margin: 20px 14px;
+}
+
+.nbRating {
+	font-size:8pt;
+	vertical-align:text-top;
+	font-weight: normal;
+}
+
+.itemcell { 
+	width: 100%;  
+	display:inline-block;
+}
+
+.itemcellwrapper { 
+	margin-top: 9px;
+	margin-right: 12px;
+	margin-bottom: 7px;
+	margin-left: 10px;
+	padding-right: 8px;
+}
+
+.buttoncellwrapper { 
+	margin-top: 9px;
+	margin-bottom: 7px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align:center;
+}
+
+.dateLabel { 
+	font-size: .6em; 
+	color: #324f85; 
+	margin-left: 3em;
+}
+
+.dateLabelInvalid { 
+	color: red;
+}
+
+.lineItemPreventTouch {
+	width:2.5em;
+	height:3em; 
+	position:absolute; 
+	margin-left: -8px;
+	margin-top: -11px;
+}
+
+.appCenterGrid .mblListItem {
+	float: left;
+	box-sizing: border-box; 
+}
+
+.preferenceDialogTitle {
+	font-weight:bold;
+	font-size:14pt;
+	margin-bottom:5px
+}
+
+.appCenterGridFirstColomn {
+	clear: left;
+}
+
+.loginForm .mblListItem {
+	padding-left: 17px;
+}
+
+/* === Check Button ==*/
+.mblDomButtonInstalledVersion{
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background-image: url(images/installed.png);
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.dj_tablet .loginForm {
+	padding-left: 10%;	
+	padding-right: 10%;
+	padding-top: 50px;
+}
+
+.dj_tablet .buttoncellwrapper button {
+	width: auto;
+	padding: 0px 40px;
+}
+
+.dj_tablet .paddedButton {
+	display: inline-block;
+	padding: 0px 50px;	
+	width: auto;
+}
+
+.dj_tablet .padded1Button {
+	padding: 0px 50px;
+}
+
+.dj_tablet .appCenterGrid .mblListItem {
+	border-bottom-color: transparent;	
+}
+
+.dj_tablet .appCenterGrid .mblEdgeToEdgeList .mblListItem:last-child {
+	border-bottom-color:transparent;
+}
+
+.dj_tablet .topPanel .mblTabBar {
+	border-bottom: 0;
+	box-shadow: 0 0; 
+	display:inline-block;
+}
+
+.dj_tablet .topPanel .buttoncellwrapper {
+	text-align: right;
+	margin-top: 30px;
+}
+
+.dj_tablet .actionSheet .mblScrollablePane {
+	width: 100%;
+	height: 100%;
+}
+
+.dj_tablet .actionSheet {
+	width: 200px;	
+}
+
+.dj_tablet .actionSheet .mblEdgeToEdgeList {
+	width: 100%;
+}
+
+.dj_tablet .topPanel .mblTabBarSegmentedControl .mblTabBarButton {
+	width: auto !important;	
+}
+
+.dj_tablet .topPanel .mblTabBarSegmentedControl .mblTabBarButtonLabel {		
+	padding: 0 20px;	
+}
+
+.dj_tablet.dj_landscape .topPanel .mblTabBarSegmentedControl .mblTabBarButtonLabel {		
+	padding: 0 40px;	
+}
+
+
+.dj_tablet .emptyReview .emptyListContainer {
+	margin-top: -70px;
+}
+
+.mblTabBarSegmentedControl  #reviewsButton.mblTabBarButton .mblTabBarButtonLabel {
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.dj_tablet .mblSimpleDialog {
+	width:400px;	
+}
+
+/* Fix IDX simple dialog close button */
+.dj_tablet .mblSimpleDialog .mblSimpleDialogCloseBtn {
+	border: 3px solid #999;
+	background-color: #fff;
+	border-radius: 20px;
+	margin-left: -6px;
+}
+
+
+.dj_tablet .toaster {
+	left: 30%;
+	right: 30%;
+}
+
+.dj_tablet .mblSimpleDialog.AlertDialog .mblButton{
+	width: auto;
+	padding: 0px 40px;
+}
+
+.unselectable {
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+
+/* Scaling management */
+
+@media (-webkit-min-device-pixel-ratio: 1.5), 
+       (min-resolution: 1.5dppx) {
+       
+	.mblDomButtonHeadingLogoutIcon {
+		background-image: url(images/logout_48.png);
+	}	
+	.mblDomButtonHeadingRefreshIcon {
+		background-image: url(images/refresh_48.png);	
+	}
+	.mblDomButtonHeadingSortIcon {
+		background-image: url(images/sort_32.png);	
+	}	
+	.mblAppLinkIcon {
+		background-image: url(images/link_30.png);	
+	}	
+	.mblStarRatingIcon {		
+		background-image: url(images/stars_48.png);		
+	}	
+	.mblSmallRating .mblStarRatingIcon {		
+		background-image: url(images/stars_32.png);		
+	}
+	.mblDomButtonGearIcon {
+		background-image: url(images/gear_48.png);	
+	}
+	.mblDomButton.mblDomButtonHeadingFavIcon {	
+		background-image: url(images/stars_48.png);
+	}
+	.mblDomButtonCatalogTabIcon {
+		background-image: url(images/tab-catalog_48.png);	
+	}	
+	.mblDomButtonFavoritesTabIcon {
+		background-image: url(images/tab-favorites_48.png);
+	}
+	.mblDomButtonUpdatesTabIcon {
+		background-image: url(images/tab-updates_48.png);
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), /* Retina on Webkit */
+       (min-resolution: 2dppx)              /* Everyone else */ {
+       
+	.mblDomButtonHeadingLogoutIcon {
+		background-image: url(images/logout_64.png);
+	}	
+	.mblDomButtonHeadingRefreshIcon {
+		background-image: url(images/refresh_64.png);	
+	}
+	.mblDomButtonHeadingSortIcon {
+		background-image: url(images/sort_64.png);	
+	}
+	.mblAppLinkIcon {
+		background-image: url(images/link_40.png);	
+	}		
+	.mblStarRatingIcon {		
+		background-image: url(images/stars_64.png);		
+	}	
+	.mblSmallRating .mblStarRatingIcon {		
+		background-image: url(images/stars_40.png);		
+	}
+	.mblDomButtonGearIcon {
+		background-image: url(images/gear_64.png);	
+	}
+	.mblDomButton.mblDomButtonHeadingFavIcon {	
+		background-image: url(images/stars_64.png);
+	}
+	.mblDomButtonCatalogTabIcon {
+		background-image: url(images/tab-catalog_64.png);	
+	}	
+	.mblDomButtonFavoritesTabIcon {
+		background-image: url(images/tab-favorites_64.png);
+	}
+	.mblDomButtonUpdatesTabIcon {
+		background-image: url(images/tab-updates_64.png);
+	}
+	
+}
+
+@media (-webkit-min-device-pixel-ratio: 3),
+       (min-resolution: 3dppx){
+       
+	.mblDomButtonHeadingLogoutIcon {
+		background-image: url(images/logout_96.png);
+	}	
+	.mblDomButtonHeadingRefreshIcon {
+		background-image: url(images/refresh_96.png);	
+	}
+	.mblDomButtonHeadingSortIcon {
+		background-image: url(images/sort_96.png);	
+	}	
+	.mblAppLinkIcon {
+		background-image: url(images/link_40.png);	
+	}		
+	.mblStarRatingIcon {		
+		background-image: url(images/stars_96.png);		
+	}	
+	.mblSmallRating .mblStarRatingIcon {		
+		background-image: url(images/stars_64.png);		
+	}
+	.mblDomButtonGearIcon {
+		background-image: url(images/gear_96.png);	
+	}
+	.mblDomButton.mblDomButtonHeadingFavIcon {	
+		background-image: url(images/stars_96.png);
+	}
+	.mblDomButtonCatalogTabIcon {
+		background-image: url(images/tab-catalog_96.png);	
+	}	
+	.mblDomButtonFavoritesTabIcon {
+		background-image: url(images/tab-favorites_96.png);
+	}
+	.mblDomButtonUpdatesTabIcon {
+		background-image: url(images/tab-updates_96.png);
+	}
+}
+
+
+/* Stylesheet content from css/AppCenter.css in folder iphone */
+/*
+ *  Licensed Materials - Property of IBM
+ *  5725-I43 (C) Copyright IBM Corp. 2011, 2014. All Rights Reserved.
+ *  US Government Users Restricted Rights - Use, duplication or
+ *  disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+
+/* this CSS file extends the application CSS file found under common\css */
+
+/* body should stretch in an iPhone application */
+body {
+	height: 100%;
+	overflow: auto;
+}
+
+/*Worklight container div */
+#content {
+	width: 100%;
+}

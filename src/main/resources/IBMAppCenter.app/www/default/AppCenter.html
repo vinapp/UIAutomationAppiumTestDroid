@@ -1,0 +1,55 @@
+<!DOCTYPE HTML><!-- PII admin facing --><html>
+    <!-- Licensed Materials - Property of IBM                                   
+        5725-I43 (C) Copyright IBM Corp. 2011, 2014. All Rights Reserved.
+        US Government Users Restricted Rights - Use, duplication or            
+        disclosure restricted by GSA ADP Schedule Contract with IBM Corp.  -->
+    <head>
+        <meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta content="no" name="msapplication-tap-highlight">
+        <meta content="telephone=no" name="format-detection">
+        <title>IBM MobileFirst Platform Application Center Mobile Client</title>		
+        <link href="worklight/worklight.css" rel="stylesheet">
+        <link href="css/AppCenter.css" rel="stylesheet" type="text/css">
+        <script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		 WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "IBM App Center",
+   "APP_ID": "AppCenter",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "7.1",
+   "ENVIRONMENT": "iphone",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_NATIVE_VERSION": "2193014524",
+   "WORKLIGHT_PLATFORM_VERSION": "7.1.0.0",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/AppCenter\/iphone\/"
+};
+</script>
+		<script src="worklight/cordova.js"></script>
+		<script src="worklight/wljq.js"></script>
+		<script src="worklight/worklight.js"></script>
+		<script src="worklight/checksum.js"></script>
+		<script src="worklight/Tealeaf.min.js"></script>
+		<script src="js/idx/mobile/deviceTheme.js" type="text/javascript"></script>
+		<script data-dojo-config="parseOnLoad: false,
+				mblHideAddressBar: false,
+				mblAndroidWorkaround: false,
+				mblAlwaysHideAddressBar: false,					
+				async: 1" src="js/dojo/dojo/dojo.js" type="text/javascript">
+		</script>
+		<script type="text/javascript">
+			window.$ = window.jQuery = WLJQ;
+		</script>
+    </head>
+    <body id="content" style="overflow-y:hidden; overflow-x:hidden;">
+        <script src="js/initOptions.js" type="text/javascript"></script>
+		<script src="js/AppCenter.js" type="text/javascript"></script>
+		<script src="js/messages.js" type="text/javascript"></script>
+    </body>
+</html>

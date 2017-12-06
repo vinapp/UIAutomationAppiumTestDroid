@@ -1,0 +1,21 @@
+
+/* Stylesheet content from js/idx/mobile/themes/common/dojox/domButtons/DomButtonGrayMinus.css in folder common */
+/* === Gray Minus Button ==*/
+.mblDomButtonGrayMinus {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url(images/mblDomButtonGrayMinus.png) center center no-repeat;
+}
+.mblDomButtonGrayMinus > div {
+	display: none;
+}
+.mblDomButtonGrayMinus > div > div {
+	display: none;
+}
+.mblDomButtonGrayMinus > div > div > div {
+	display: none;
+}
+.mblDomButtonGrayMinus > div > div > div > div {
+	display: none;
+}

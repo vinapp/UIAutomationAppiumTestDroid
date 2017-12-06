@@ -1,0 +1,21 @@
+
+/* Stylesheet content from js/idx/mobile/themes/common/dojox/domButtons/DomButtonWhiteMinus.css in folder common */
+/* === White Minus Button ==*/
+.mblDomButtonWhiteMinus {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url(images/mblDomButtonWhiteMinus.png) center center no-repeat;
+}
+.mblDomButtonWhiteMinus > div {
+	display: none;
+}
+.mblDomButtonWhiteMinus > div > div {
+	display: none;
+}
+.mblDomButtonWhiteMinus > div > div > div {
+	display: none;
+}
+.mblDomButtonWhiteMinus > div > div > div > div {
+	display: none;
+}

@@ -1,0 +1,21 @@
+
+/* Stylesheet content from js/idx/mobile/themes/common/dojox/domButtons/DomButtonDarkBlueCheck.css in folder common */
+/* === Dark Blue Check Button ==*/
+.mblDomButtonDarkBlueCheck {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background: url(images/mblDomButtonDarkBlueCheck.png) center center no-repeat;
+}
+.mblDomButtonDarkBlueCheck > div {
+	display: none;
+}
+.mblDomButtonDarkBlueCheck > div > div {
+	display: none;
+}
+.mblDomButtonDarkBlueCheck > div > div > div {
+	display: none;
+}
+.mblDomButtonDarkBlueCheck > div > div > div > div {
+	display: none;
+}

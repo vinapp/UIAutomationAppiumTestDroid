@@ -1,0 +1,20 @@
+{	
+	"url": null,
+	"defaultPort": null,
+	"defaultContext": null,
+	"ssl": false,
+	"allowDowngrade": true,
+	"appCenterAutoUpgrade" : true,
+	"showPreviousVersions": true, 
+    "showInternalVersion": true, 
+    "allowAppLinkReview": true,
+	"listItemRenderer": "full",
+    "listAverageRating": "latestVersion",  	
+	"gcmProjectId": "",
+	"log": true,
+	"logGeneral": "INFO",
+	"logNavigation": "INFO",
+	"logRestService": "INFO",
+	"logCordovaPlugin":"INFO",
+	"requestTimeout": 30000
+}

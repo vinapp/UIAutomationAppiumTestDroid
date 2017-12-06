@@ -1,0 +1,24 @@
+<div class="view mblView">	
+	<!-- Licensed Materials - Property of IBM                                   
+		5725-I43 (C) Copyright IBM Corp. 2011, 2014. All Rights Reserved.
+		US Government Users Restricted Rights - Use, duplication or            
+		disclosure restricted by GSA ADP Schedule Contract with IBM Corp.  -->
+	<div class="ios-status-bar"	data-app-constraint="top"></div>
+	<div data-dojo-attach-point="header" data-dojo-type="appcenter/widgets/Heading" data-app-constraint="top" label="${nls.rateTitle}" style="right:0">				
+	</div>
+	<div data-dojo-attach-point="versionLabel" data-app-constraint="top" class="topPanel titleTopPanel unselectable">
+		<div data-dojo-attach-point="appLabel" class="noLineBreak" ></div>
+		<div data-dojo-attach-point="versionLabel" class="noLineBreak subTitleText"></div>
+	</div>	
+	<div data-dojo-type="dojox/app/widgets/Container" data-app-constraint="center" data-dojo-props="scrollable: false" style="bottom:50px;margin-left:17px;margin-right:17px">			
+		<form data-dojo-attach-point="form" data-dojo-attach-event='onsubmit:_onSubmit'>		
+			<div data-dojo-attach-point="rating" data-dojo-type="appcenter/widgets/Rating" style="width:180px;margin-left:auto;margin-right:auto;margin-bottom:10px;margin-top:10px" class="unselectable" data-dojo-props="editable:true"></div>
+			<div style="position:absolute;top:57px;bottom:0;width:100%;overflow:hidden">
+				<textarea data-dojo-attach-point="message" data-dojo-type="dojox/mobile/TextArea" style="height:100%;width:100%;box-sizing:border-box"></textarea>
+			</div>
+		</form>
+	</div>
+	<div class="buttoncellwrapper" data-app-constraint="bottom">
+		<button data-dojo-attach-point="sendButton" data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn itemcell" data-dojo-props="duration:100" >${nls.sendButton}</button>
+	</div>
+</div>

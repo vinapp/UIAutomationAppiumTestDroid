@@ -1,0 +1,38 @@
+<div class="view mblView">
+	<!-- Licensed Materials - Property of IBM                                   
+		5725-I43 (C) Copyright IBM Corp. 2011, 2014. All Rights Reserved.
+		US Government Users Restricted Rights - Use, duplication or            
+		disclosure restricted by GSA ADP Schedule Contract with IBM Corp.  -->
+	<div class="ios-status-bar"	data-app-constraint="top"></div>
+	<div data-dojo-type="appcenter/widgets/Heading" data-dojo-attach-point="header" label="${nls.reviewsTitle}" data-app-constraint="top" style="right:0px">		
+		<span data-dojo-attach-point="prefButton" data-dojo-type="dojox/mobile/ToolBarButton" class="mblSpriteButton" data-dojo-props="icon:'mblDomButtonGearIcon'" style="float:right;"></span>
+	</div>
+	<div data-app-constraint="top" class="topPanel titleTopPanel unselectable" >
+		<div data-dojo-attach-point="appLabel" class="noLineBreak" ></div>
+		<div data-dojo-attach-point="versionLabel" class="noLineBreak subTitleText" ></div>
+		<div>
+			<span data-dojo-attach-point="rating" data-dojo-type="appcenter/widgets/Rating" data-dojo-props="baseClass:'mblSmallRating'"></span>
+			<span data-dojo-attach-point="ratingMessage" class="nbRating"></span>
+		</div>		
+	</div>
+	<div data-dojo-type="dojox/app/widgets/Container" data-dojo-attach-point="container" data-app-constraint="center" data-dojo-props="scrollable: true, fixedFooter:'mainTabBar'">				
+		<ul data-dojo-type="appcenter/widgets/EdgeToEdgeStoreList" data-dojo-attach-point="list" class="feedbackList" data-app-constraint="center" data-dojo-props="variableRowHeight:true, type:'feedback'"></ul>
+		<div class="buttoncellwrapper" >
+			<button data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn itemcell" data-dojo-attach-point="loadButton" style="display:none">${nls.loadMore}</button>
+		</div>		
+	</div>		
+	<div data-dojo-attach-point="noReview" class="emptyList emptyReview unselectable">
+		<div class="emptyListContainer">
+			<div class="emptyReviewIcon"></div>
+			<span data-dojo-attach-point="noReviewLabel">${nls.noReview}</span>
+		</div>
+	</div>	
+	<div data-dojo-attach-point="prefDialog" data-dojo-type="dojox/mobile/SimpleDialog" class="unselectable">
+		<div class="preferenceDialogTitle">${nls.preferencesTitle}</div>
+		<ul data-dojo-type="dojox/mobile/RoundRectList" data-dojo-props="select:'single'">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-attach-point="showAllListItem" data-dojo-props="checkClass: 'mblDomButtonDarkBlueCheck'">${nls.showAllVersion}</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-attach-point="showVersionListItem" data-dojo-props="checked: true,	checkClass: 'mblDomButtonDarkBlueCheck'">&nbsp;</li>
+		</ul>			
+		<button data-dojo-attach-point="dialogOkButton" data-dojo-type="appcenter/widgets/Button" class="baseBtn whiteBtn padded1Button" data-dojo-props="fixed:'bottom'" >${nls.okButton}</button>	
+	</div>
+</div>
