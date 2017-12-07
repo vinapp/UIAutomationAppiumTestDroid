@@ -36,22 +36,24 @@ public class ServerUtil {
 
 	public ServerUtil() {
 		properties = new Properties();
-		if (System.getProperty("skipDatafile")!=null && System.getProperty("skipDatafile").equals("true")) {
-			protocol = System.getProperty("protocol"); //Passed as a part of the command line as -Doption
-			host = System.getProperty("hostname");
-			port = Integer.valueOf(System.getProperty("port"));
-			context = System.getProperty("context");
-			username = System.getProperty("username");
-			password = System.getProperty("password");
-			absoluteurl = System.getProperty("absoluteurl");
-			sampleuploadfile = System.getProperty("uploadfile");
-			mobcontext = System.getProperty("mobcontext");
-			chromedriverpath = System.getProperty("chromedriverpath");
-			firefoxdriverpath = System.getProperty("firefoxdriverpath");
-			appcenterclientapppath = System.getProperty("appcenterclientapppath");
+		if (System.getenv("skipDatafile")!=null && System.getenv("skipDatafile").equals("true")) {
+                        System.out.println("........ Vinod Inside if .........");
+			protocol = System.getenv("protocol"); //Passed as a part of the command line as -Doption
+			host = System.getenv("hostname");
+			port = Integer.valueOf(System.getenv("port"));
+			context = System.getenv("context");
+			username = System.getenv("username");
+			password = System.getenv("password");
+			absoluteurl = System.getenv("absoluteurl");
+			sampleuploadfile = System.getenv("uploadfile");
+			mobcontext = System.getenv("mobcontext");
+			chromedriverpath = System.getenv("chromedriverpath");
+			firefoxdriverpath = System.getenv("firefoxdriverpath");
+			appcenterclientapppath = System.getenv("appcenterclientapppath");
                         System.out.println("appcenterclientapppath ----- vinod ----> "+ appcenterclientapppath);
                         System.out.println("host ----- vinod ----> "+ host);
 		} else {
+                        System.out.println("........ Vinod Inside else .........");
 			InputStream is = ClassLoader.getSystemResourceAsStream("datafile.properties");
 			try {
 				properties.load(is);
