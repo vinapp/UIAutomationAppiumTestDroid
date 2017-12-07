@@ -49,6 +49,8 @@ public class ServerUtil {
 			chromedriverpath = System.getProperty("chromedriverpath");
 			firefoxdriverpath = System.getProperty("firefoxdriverpath");
 			appcenterclientapppath = System.getProperty("appcenterclientapppath");
+                        System.out.println("appcenterclientapppath ----- vinod ----> "+ appcenterclientapppath);
+                        System.out.println("host ----- vinod ----> "+ host);
 		} else {
 			InputStream is = ClassLoader.getSystemResourceAsStream("datafile.properties");
 			try {
